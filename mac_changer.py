@@ -2,6 +2,20 @@ import subprocess
 import optparse
 import re
 
+def banner():
+    print(r"""
+ █~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~  ███████╗██╗         ███████╗ █████╗  ██████╗ ██╗  ██╗ █████╗ ██╗       ~
+# ~  ██╔════╝██║         ╚══███╔╝██╔══██╗██╔════╝ ██║  ██║██╔══██╗██║       ~
+# ~  █████╗  ██║           ███╔╝ ███████║██║  ███╗███████║███████║██║       ~
+# ~  ██╔══╝  ██║          ███╔╝  ██╔══██║██║   ██║██╔══██║██╔══██║██║       ~
+# ~  ███████╗███████╗    ███████╗██║  ██║╚██████╔╝██║  ██║██║  ██║███████╗  ~
+# ~  ╚══════╝╚══════╝    ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝  ~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                > MAC CHANGER TOOL — ELZAGHAL <
+    """)
+
 def help_function():
     parser=optparse.OptionParser()
     parser.add_option("-i", "--interface", dest="interface", help="the interface that want to change it")
@@ -31,6 +45,7 @@ def check(interface):
     else:
         print("[-]could not find the mac address")
 
+banner()
 options= help_function()
 current=check(options.interface)
 mac_changer(options.interface, options.new_mac)
@@ -40,3 +55,4 @@ if current == new_current:
 else:
     print("[+] MAC successfully changed ")
     print("{} ===> {}".format(current, new_current))
+    
