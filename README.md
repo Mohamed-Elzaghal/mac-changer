@@ -17,13 +17,12 @@ Works on all Linux distros
 
 📸 Example Usage
 
-    sudo python3 mac_changer.py -i eth0 -m 00:22:33:44:55:64
+    sudo python3 mac_changer.py -i eth0 -m 00:22:33:44:55:61
 
-Output:
+output:
 
-    [+]changing the mac address to 00:22:33:44:55:64
-    [+] MAC successfully changed 
-    00:22:33:44:55:61 ===> 00:22:33:44:55:64
+<img width="1292" height="208" alt="kali-linux-2025 2-virtualbox-amd64  Running  - Oracle VirtualBox 11_15_2025 12_11_03 AM" src="https://github.com/user-attachments/assets/d12620a8-0617-42b6-b307-27c4c86ff43c" />
+
 
 ⚙️ Installation
 
